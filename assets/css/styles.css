@@ -1,0 +1,274 @@
+/*=============== FONTS ===============*/
+@import url("");
+
+@font-face {
+  font-family: "font-ultralight";
+  src: url(../fonts/SF-Pro-Display-Ultralight.ttf);
+}
+
+@font-face {
+  font-family: "font-light";
+  src: url(../fonts/SF-Pro-Display-Light.ttf);
+}
+
+@font-face {
+  font-family: "font-regular";
+  src: url(../fonts/SF-Pro-Display-Regular.ttf);
+}
+
+@font-face {
+  font-family: "font-semibold";
+  src: url(../fonts/SF-Pro-Display-Semibold.ttf);
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --color1: #333333;
+  --color2: #2179D3;
+  --color3: #000000;
+  --color4: #FFFFFF;
+  --color5 :#E5E5E5;
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: var(--color2);
+}
+
+body {
+  font-family: "font-regular";
+  font-size: 1rem;
+  color: var(--color3);
+  background-color: var(--color4);
+}
+
+/*=============== HEADER ===============*/
+nav {
+  background-color: var(--color1);
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 45px;
+  width: 900px;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+  color: var(--color5);
+  font-family: "font-light";
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.iconNav {
+  font-size: 16px;
+}
+
+.nav_responsive {
+  display: none;
+}
+
+.sous_menu {
+  display: none;
+}
+
+.ri-close-line {
+  display: none;
+}
+
+.ri-menu-line {
+  display: none;
+}
+
+/*=============== RESPONSIVE HEADER ===============*/
+@media (min-width: 1px) and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .nav_responsive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 49%;
+    padding-right: 15px;
+  }
+  .iconNav {
+    font-size: 20px;
+    color: var(--color5);
+  }
+  .ri-menu-line {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+  }
+  .ri-close-line {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+  }
+  .sous_menu {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color3);
+    position: absolute;
+    top: 45px;
+    left: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  li {
+    height: 25px;
+    font-size: 18px;
+    margin-top: 5%;
+    position: relative;
+  }
+  li:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color1);
+    height: 1px;
+    width: 80vw;
+  }
+}
+
+/*=============== MAIN ===============*/
+.iphone13pro {
+  height: 60vh;
+  padding-top: 45px;
+  background-image: url(../img/img_iphone13pro.jpg);
+  background-size: 225% cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5vh;
+  height: 150px;
+}
+
+.products_link {
+  width: 250px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h1 {
+  font-family: "font-semibold";
+  font-size: 48px;
+}
+
+h2 {
+  font-family: "font-ultralight";
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+h3 {
+  font-family: "font-light";
+  letter-spacing: 2px;
+  color: var(--color2);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+h4 {
+  font-family: "font-light";
+  font-size: 18px;
+}
+
+.iphonese {
+  height: 50vh;
+  padding-top: 5px;
+  background-image: url(../img/img_iphonese.jpg);
+  background-size: 200% cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#logo_products {
+  width: 160px;
+  height: 40px;
+}
+
+h5 {
+    font-family: "font-ultralight";
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: var(--color5);
+}
+
+.ipadair {
+  height: 50vh;
+  padding-top: 5px;
+  background-image: url(../img/img_ipadair.jpg);
+  background-size: 200% cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#text_ipadair {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+}
+
+
+
+/*=============== FOOTER ===============*/
+
+/*=============== RESPONSIVE ===============*/
+@media (min-width: 1441px) {
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media (min-width: 425px) and (max-width: 767px) {
+}
+@media (min-width: 375px) and (max-width: 424px) {
+}
+@media (max-width: 374px) {
+}
