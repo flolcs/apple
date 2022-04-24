@@ -118,7 +118,7 @@ a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-left: 49%;
+    margin-left: 48%;
     padding-right: 15px;
   }
   .iconNav {
@@ -211,7 +211,7 @@ h2 {
   text-align: center;
 }
 h3 {
-  font-family: "font-light";
+  font-family: "font-ultralight";
   letter-spacing: 2px;
   color: var(--color2);
   cursor: pointer;
@@ -369,18 +369,10 @@ h5 {
 
 h6 {
   font-family: "font-ultralight";
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1px;
   text-align: center;
   width: 70%;
-}
-#slow_horses {
-  height: 60%;
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  transform: translateX(-50%);
-
 }
 
 #text_container_appleTV {
@@ -390,6 +382,7 @@ h6 {
   justify-content: space-between;
   flex-direction: column;
   height: 95%;
+  margin-top: 0;
 }
 
 #play-button {
@@ -401,13 +394,76 @@ h6 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 16%;
+  width: 100px;
 }
 
 
 /*=============== RESPONSIVE MAIN GRID ===============*/
-
-
+@media (min-width: 768px) and (max-width: 1023px) {
+  .apple_fitness {
+    background-image: url(../img/img_applefitness_responsive.jpg);
+  }
+  #text_wwdc {
+    width: 80%;
+  }
+}
+@media (min-width: 1px) and (max-width: 767px) {
+  .grid {
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 0px;
+  }
+  .wwdc {
+    grid-row: 1;
+    grid-column: 1;
+    background-image: url(../img/img_wwdc_responsive.jpg);
+  }
+  .apple_watch {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .studio_display {
+    grid-row: 3;
+    grid-column: 1;
+    background-image: url(../img/img_studiodisplay_responsive.jpg);
+  }
+  .mac_studio {
+    grid-row: 4;
+    grid-column: 1;
+    background-image: url(../img/img_macstudio_responsive.jpg);
+  }
+  .apple_fitness {
+    grid-row: 5;
+    grid-column: 1;
+    background-image: url(../img/img_applefitness_responsive.jpg);
+  }
+  .apple_tv {
+    grid-row: 6;
+    grid-column: 1;
+    background-image: url(../img/img_appletv_responsive.jpg);
+  }
+  #text_wwdc {
+    width: 80%;
+    font-size: 18px;
+  }
+  #titre_products {
+    font-size: 32px;
+  }
+  
+  h6 {
+    font-size: 16px;
+    width: 80%;
+  }
+  .grid_container {
+    margin-top: 10px;
+  }
+  #wwdc_text_container {
+    padding-top: 0;
+    padding-top: 275px;
+    height: 80%;
+  }
+}
 
 
 /*=============== FOOTER ===============*/
