@@ -28,6 +28,7 @@
   --color3: #000000;
   --color4: #FFFFFF;
   --color5 :#E5E5E5;
+  --color6: #C6E1E6;
 }
 
 /*=============== BASE ===============*/
@@ -165,15 +166,18 @@ a {
   }
 }
 
-/*=============== MAIN ===============*/
-.iphone13pro {
-  height: 60vh;
-  padding-top: 45px;
-  background-image: url(../img/img_iphone13pro.jpg);
-  background-size: 225% cover;
+/*=============== MAIN CONTAINER ===============*/
+.main_container {
+  height: 550px;
+  padding-top: 15px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.iphone13pro {
+  background-image: url(../img/img_iphone13pro.jpg); 
 }
 
 .text_container {
@@ -181,7 +185,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  margin-top: 5vh;
+  padding-top: 60px;
   height: 150px;
 }
 
@@ -197,12 +201,14 @@ a {
 h1 {
   font-family: "font-semibold";
   font-size: 48px;
+  text-align: center;
 }
 
 h2 {
   font-family: "font-ultralight";
   font-size: 24px;
   letter-spacing: 2px;
+  text-align: center;
 }
 h3 {
   font-family: "font-light";
@@ -210,21 +216,17 @@ h3 {
   color: var(--color2);
   cursor: pointer;
   font-size: 16px;
+  text-align: center;
 }
 
 h4 {
   font-family: "font-light";
   font-size: 18px;
+  text-align: center;
 }
 
 .iphonese {
-  height: 50vh;
-  padding-top: 5px;
   background-image: url(../img/img_iphonese.jpg);
-  background-size: 200% cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
 }
 
 #logo_products {
@@ -237,27 +239,181 @@ h5 {
     font-size: 24px;
     letter-spacing: 2px;
     color: var(--color5);
+    text-align: center;
 }
 
 .ipadair {
-  height: 50vh;
-  padding-top: 5px;
   background-image: url(../img/img_ipadair.jpg);
-  background-size: 200% cover;
+}
+
+#text_ipadair {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 0;
+}
+
+/*=============== RESPONSIVE MAIN CONTAINER ===============*/
+@media (min-width: 1px) and (max-width: 1023px) {
+  #text_ipadair {
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    padding-top: 75px;
+  }
+  .ipadair {
+    background-image: url(../img/img_ipadair_responsive.jpg); 
+  }
+}
+@media (min-width: 1px) and (max-width: 767px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  
+  h4 {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 18px;
+}
+#logo_products {
+  width: 115px;
+  height: 30px;
+}
+.iphone13pro {
+  background-image: url(../img/img_iphone13pro_responsive.jpg); 
+}
+.iphonese {
+  background-image: url(../img/img_iphonese_responsive.jpg); 
+}
+.text_container {
+  margin-top: 4vh;
+  height: 90px;
+}
+}
+
+/*=============== MAIN GRID ===============*/
+.grid {
+  display: grid;
+  margin: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.grid_container {
+  height: 500px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 }
 
-#text_ipadair {
-  position: absolute;
-  top: 25%;
-  left: 20%;
+.wwdc {
+  background-image: url(../img/img_wwdc.jpg);
+  grid-row: 1;
+  grid-column: 1;
 }
+.apple_watch {
+  background-image: url(../img/img_applewatch.jpg);
+  grid-row: 1;
+  grid-column: 2;
+}
+.studio_display {
+  background-image: url(../img/img_studiodisplay.jpg);
+  grid-row: 2;
+  grid-column: 1;
+}
+.mac_studio {
+  background-image: url(../img/img_macstudio.jpg);
+  grid-row: 2;
+  grid-column: 2;
+}
+.apple_fitness {
+  background-image: url(../img/img_applefitness.jpg);
+  grid-row: 3;
+  grid-column: 1;
+}
+.apple_tv {
+  background-image: url(../img/img_appletv.jpg);
+  grid-row: 3;
+  grid-column: 2;
+}
+
+#wwdc_text_container {
+  padding-top: 0;
+  padding-top: 325px;
+  height: 100%;
+}
+
+#text_wwdc {
+  text-align: center;
+  color: var(--color6);
+  width: 50%;
+  font-size: 18px;
+}
+
+#titre_products {
+  text-align: center;
+  font-size: 38px;
+  font-family: "font-semibold";
+}
+
+h6 {
+  font-family: "font-ultralight";
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 70%;
+}
+#slow_horses {
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
+
+}
+
+#text_container_appleTV {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 95%;
+}
+
+#play-button {
+  color: var(--color2);
+}
+
+.discover_appletv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 16%;
+}
+
+
+/*=============== RESPONSIVE MAIN GRID ===============*/
+
 
 
 
 /*=============== FOOTER ===============*/
+
+
+/*=============== RESPONSIVE FOOTER ===============*/
 
 /*=============== RESPONSIVE ===============*/
 @media (min-width: 1441px) {
