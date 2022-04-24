@@ -29,6 +29,7 @@
   --color4: #FFFFFF;
   --color5 :#E5E5E5;
   --color6: #C6E1E6;
+  --color7: #F5F5F7;
 }
 
 /*=============== BASE ===============*/
@@ -141,20 +142,33 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    height: 100vh;
+    height: 0vh;
     background-color: var(--color3);
     position: absolute;
     top: 45px;
     left: 0;
     padding-left: 10%;
     padding-right: 10%;
+    animation: animMenu 0.5s ease forwards;
+  }
+  @keyframes animMenu {
+    to {
+      height: 100vh;
+    }
   }
   li {
-    height: 25px;
+    height: 0px;
     font-size: 18px;
     margin-top: 5%;
     position: relative;
+    animation: animLi 0.5s ease forwards;
   }
+  @keyframes animLi {
+    to {
+      height: 30px;
+    }
+  }
+
   li:after {
     content: "";
     position: absolute;
@@ -219,6 +233,11 @@ h3 {
   text-align: center;
 }
 
+h3:hover {
+  border-bottom: #2179D3 solid 1px;
+}
+
+
 h4 {
   font-family: "font-light";
   font-size: 18px;
@@ -227,6 +246,8 @@ h4 {
 
 .iphonese {
   background-image: url(../img/img_iphonese.jpg);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #logo_products {
@@ -465,8 +486,34 @@ h6 {
   }
 }
 
-
 /*=============== FOOTER ===============*/
+footer {
+  margin-top: 10px;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  background-color: var(--color7);
+}
+
+.conditions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 200px;
+}
+.conditions::after {
+  content: "";
+  background-color: var(--color1);
+  height: 1px;
+  width: 100%;
+}
+
+p {
+  font-family: "font-regular";
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--color1);
+}
 
 
 /*=============== RESPONSIVE FOOTER ===============*/
