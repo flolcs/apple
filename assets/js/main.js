@@ -18,3 +18,23 @@ toggleCloseMenu.addEventListener("click", () => {
   toggleCloseMenu.style.display = "none";
   nav.style.backgroundColor = "#333333";
 });
+
+// ScrollReveal
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "50px",
+  duration: 2000,
+  delay: 400,
+  //reset: true
+});
+
+sr.reveal(".iphone13pro", { origin: "top" });
+sr.reveal(".iphonese", { origin: "bottom" });
+sr.reveal("h3", { origin: "bottom" });
+sr.reveal(".wwdc", { origin: "left" });
+sr.reveal(".studio_display", { origin: "left" });
+sr.reveal(".apple_fitness", { origin: "left" });
+sr.reveal(".apple_watch", { origin: "right" });
+sr.reveal(".mac_studio", { origin: "right" });
+sr.reveal(".ipadair", { origin: "top" });
+sr.reveal(".apple_tv", { origin: "right" });

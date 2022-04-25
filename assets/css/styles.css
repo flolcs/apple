@@ -489,8 +489,8 @@ h6 {
 /*=============== FOOTER ===============*/
 footer {
   margin-top: 10px;
-  padding-left: 15vw;
-  padding-right: 15vw;
+  padding-left: 20%;
+  padding-right: 20%;
   background-color: var(--color7);
 }
 
@@ -504,14 +504,14 @@ footer {
 .conditions::after {
   content: "";
   background-color: var(--color1);
-  height: 1px;
+  height: 0.01rem;
   width: 100%;
 }
 
 p {
-  font-family: "font-regular";
-  font-size: 10px;
+  font-family: "font-light";
   letter-spacing: 1px;
+  font-size: 10px;
   color: var(--color1);
 }
 
@@ -520,7 +520,7 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 250px;
+  height: 300px;
 }
 
 .footer_container {
@@ -559,21 +559,34 @@ p {
   width: 100%;
 }
 
-
-
-
 /*=============== RESPONSIVE FOOTER ===============*/
-
-/*=============== RESPONSIVE ===============*/
-@media (min-width: 1441px) {
-}
 @media (min-width: 1024px) and (max-width: 1440px) {
+  footer {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
-@media (min-width: 425px) and (max-width: 767px) {
-}
-@media (min-width: 375px) and (max-width: 424px) {
-}
-@media (max-width: 374px) {
+@media (min-width: 1px) and (max-width: 767px) {
+  footer {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .footer_links {
+    display: none;
+  }
+  .conditions {
+    height: 350px;
+  }
+  .footer_mentions {
+    flex-direction: column;
+  }
+  .footer_copyright {
+    height: 120px;
+  }
 }
